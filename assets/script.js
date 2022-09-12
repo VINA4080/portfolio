@@ -13,7 +13,7 @@ var profil = {
     adresse : "LOT IVP 144 Ankadifotsy",
     dateDeNaissance : "21 Juillet 1999",
     tel : "0341062433",
-    image : "./vina.jpg",
+    image : "/vina.jpg",
     experiences : [
         {
             "Poste": "dev",
@@ -51,7 +51,7 @@ var image = document.querySelector("img");
 // document.querySelector('.container').innerHTML = myprofil;
 document.querySelector('img').setAttribute("src", profil.image);
 
-profession.innerText = profil.profession;
+// profession.innerText = profil.profession;
 titre.innerText = profil.nomEtPrenom;
 // age.innerText = profil.age;
 // adresse.innerText = profil.adresse;
@@ -66,4 +66,23 @@ for (let i = 0; i < profil.experiences.length; i++) {
 }
 
 
-document.getElementById("list_experiences").innerHTML = listItemExperience;
+// document.getElementById("list_experiences").innerHTML = listItemExperience;
+
+$(document).on("click", ".btn", function(){
+    if($(".btn").text() === ("Dark Mode")){
+        $(".btn").text("Light Mode");
+    }else if ($(".btn").text() === ("Light Mode")){
+        $(".btn").text("Dark Mode")
+    }
+
+    if ($(".container").hasClass("bg-dark")) {
+        $(".container").removeClass("bg-dark");
+        $(".container").removeClass("text-white");
+        $(".container").addClass("darkmode");
+    } else {
+        $(".container").removeClass("darkmode");
+        $(".container").addClass("bg-dark");
+        $(".container").addClass("text-white");
+    }
+    
+})
