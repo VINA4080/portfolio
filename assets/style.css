@@ -36,6 +36,7 @@ h3{
 }
 
 .info_perso{
+    /* background-color: teal; */
 }
 
 img{
@@ -227,7 +228,7 @@ table tr td{
 }
 
 .darkmode{
-    background-color: white;
+    background-color: rgb(154, 196, 214);
     color: rgb(0, 0, 0);
     border: 1px solid black
 }
